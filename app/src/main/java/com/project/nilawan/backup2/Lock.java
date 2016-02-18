@@ -65,8 +65,8 @@ public class Lock extends Activity {
             @Override
             public void onClick(View v) {
                 bt_menu.setBackgroundResource(R.drawable.menublue);
-//                Intent inte = new Intent(Lock.this, Connectmotion.class);
-                Intent inte = new Intent(Lock.this, TestConnectedMotion.class);
+                Intent inte = new Intent(Lock.this, Connectmotion.class);
+//                Intent inte = new Intent(Lock.this, TestConnectedMotion.class);
                 startActivity(inte);
             }
         });

@@ -34,10 +34,15 @@ public class NotificationAlarm extends Activity {
                 Intent intent = new Intent(NotificationAlarm.this, ControlActivity.class);
                 startActivity(intent);
             }else if (motion != motion2){
+
+                //นี่คือรถมีการขยับ
+
                 motion2 = motion;
+
+                //Create Notification
                 NotificationCompat.Builder notification = new NotificationCompat.Builder(NotificationAlarm.this);
 
-                notification.setSmallIcon(R.drawable.red);
+                notification.setSmallIcon(R.drawable.icon_cow);
                 notification.setTicker("New notification!!!");
                 notification.setWhen(System.currentTimeMillis());
                 notification.setContentTitle("This is a new notification!!");
@@ -48,7 +53,7 @@ public class NotificationAlarm extends Activity {
                 Uri sound = RingtoneManager.getDefaultUri(android.app.Notification.DEFAULT_SOUND);
                 notification.setSound(sound);
 
-                Bitmap picture = BitmapFactory.decodeResource(getResources(), R.mipmap.red);
+                Bitmap picture = BitmapFactory.decodeResource(getResources(), R.drawable.icon_cow);
                 notification.setLargeIcon(picture);
 
                 PendingIntent myPendingIntent;
@@ -65,8 +70,8 @@ public class NotificationAlarm extends Activity {
                 NotificationManager nm = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
                 nm.notify(1,n);
 
-            }
-        }
+            }   // else if 2
+        }   // else if 1
 
 /*
         if (A == 2 && motion == 1){
@@ -106,6 +111,6 @@ public class NotificationAlarm extends Activity {
 
         }
 */
-    }
+    }   // Main Method
 
-}
+}   // Main Class
