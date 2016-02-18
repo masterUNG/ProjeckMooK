@@ -101,8 +101,9 @@
 
         <service
             android:name="com.project.nilawan.backup2.MyService"
-            android:exported="false" >
-        </service>
+            android:exported="false" />
+
+        <activity android:name="com.project.nilawan.backup2.TestConnectedMotion" />
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

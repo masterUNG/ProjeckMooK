@@ -3,6 +3,7 @@ package com.project.nilawan.backup2;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
@@ -38,6 +39,11 @@ public class Connectmotion extends Activity {
         //Connected Database
         connectedDatabase();
 
+
+        //ReceiveSys
+        receiveSys();
+
+
         //Try Post Delay
        // tryPostDelay();
 
@@ -50,6 +56,21 @@ public class Connectmotion extends Activity {
 
 
     } // onCreate
+
+    private void receiveSys() {
+
+        {
+
+            new AsyncTask<Void, Void, String>() {
+                @Override
+                protected String doInBackground(Void... voids) {
+                    return null;
+                }
+            };
+
+        }//AsyncTask
+
+    }   // receiveSys
 
     private void myThreadSleep() throws InterruptedException {
 

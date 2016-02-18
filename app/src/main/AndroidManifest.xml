@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.project.nilawan.backup2" >
+    package="com.project.nilawan.backup2">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,7 +17,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/red"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -27,48 +27,67 @@
 
         <activity
             android:name=".ConnectLogin"
-            android:label="@string/title_activity_maps" >
+            android:label="@string/title_activity_maps">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MapsActivity"
-            android:label="@string/app_name"/>
-        <activity android:name=".AlarmActivity"
-            android:label="@string/app_name"/>
-        <activity android:name=".MainActivity"
-            android:label="@string/app_name"/>
-        <activity android:name=".Notification"
-            android:label="@string/app_name"/>
-        <activity android:name=".NotificationAlarm"
-            android:label="@string/app_name"/>
-        <activity android:name=".ControlActivity"
-            android:label="@string/app_name"/>
-        <activity android:name=".Connectmotion"
-        android:label="@string/app_name"/>
-        <activity android:name=".Login"
-            android:label="@string/app_name"/>
-        <activity android:name=".sendAlarmOn"
-            android:label="@string/app_name"/>
-        <activity android:name=".sendAlarmOff"
-            android:label="@string/app_name"/>
-        <activity android:name=".ConnectStatusAl"
-            android:label="@string/app_name"/>
-        <activity android:name=".Lock"
-            android:label="@string/app_name"/>
-        <activity android:name=".SendLock"
-            android:label="@string/app_name"/>
-        <activity android:name=".SendUnlock"
-            android:label="@string/app_name"/>
-        <activity android:name=".Connectmotion2"
-            android:label="@string/app_name"/>
-        <activity android:name=".CheckNoti"
-            android:label="@string/app_name"/>
-        <service android:name=".MyService"
-            android:exported="false">
-        </service>
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".AlarmActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Notification"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".NotificationAlarm"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ControlActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Connectmotion"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".sendAlarmOn"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".sendAlarmOff"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ConnectStatusAl"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Lock"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".SendLock"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".SendUnlock"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Connectmotion2"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".CheckNoti"
+            android:label="@string/app_name" />
+
+        <service
+            android:name=".MyService"
+            android:exported="false"></service>
+
+        <activity android:name=".TestConnectedMotion"></activity>
     </application>
 
 </manifest>
