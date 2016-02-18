@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.util.Log;
 
@@ -34,8 +35,33 @@ public class Connectmotion extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.control);
 
+        //Connected Database
+        connectedDatabase();
 
-// Permission StrictMode
+        //Try Post Delay
+        tryPostDelay();
+
+
+
+    } // onCreate
+
+    private void tryPostDelay() {
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                connectedDatabase();
+            }
+        }, 10000);
+
+    }   // tryPostDelay
+
+    private void connectedDatabase() {
+
+
+
+        // Permission StrictMode
         if (android.os.Build.VERSION.SDK_INT > 16) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
@@ -67,6 +93,10 @@ public class Connectmotion extends Activity {
             String smotion = MyArrList.get(0).get("motion");
             double motion = Double.parseDouble(smotion);
 
+            String[] resultSmotion = {"ไม่มีการเคลื่อนที่", "มีการเคลื่อนที่"};
+            int intIndex = Integer.parseInt(smotion);
+            Log.d("18Feb", "result ==> " + resultSmotion[intIndex]);
+
 
             Intent it = new Intent(Connectmotion.this, NotificationAlarm.class);
             it.putExtra("motion" , motion);
@@ -77,11 +107,9 @@ public class Connectmotion extends Activity {
         } catch (JSONException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
+        }   // Try Case
 
-
-
-    }
+    }   // connectedDatabase
 
 
     public String getJSONUrl(String url) {
