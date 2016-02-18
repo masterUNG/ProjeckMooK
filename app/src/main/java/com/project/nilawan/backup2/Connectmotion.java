@@ -39,21 +39,42 @@ public class Connectmotion extends Activity {
         connectedDatabase();
 
         //Try Post Delay
-        tryPostDelay();
+       // tryPostDelay();
 
+        //Thread Sleep1000
+//        try {
+//            myThreadSleep();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
 
     } // onCreate
 
+    private void myThreadSleep() throws InterruptedException {
+
+       for (int i=1;i<10;i++) {
+           Thread.sleep(2000);
+           connectedDatabase();
+       }
+
+    }
+
+
     private void tryPostDelay() {
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                connectedDatabase();
-            }
-        }, 10000);
+        for (int i=1;i<50;i++) {
+            Handler handler = new Handler();
+
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    connectedDatabase();
+                }
+            }, 2000 * i);
+        }
+
+
 
     }   // tryPostDelay
 
